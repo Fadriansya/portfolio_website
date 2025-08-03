@@ -5,7 +5,7 @@
   "workbench.colorTheme": "Noctis Minimus",
   "workbench.iconTheme": "vscode-icons",
   "editor.tabSize": 2,
-  "liveServer.settings.port": 5502,
+  "liveServer.settings.port": 5503,
   "better-comments.multilineComments": true,
   "better-comments.highlightPlainText": false
 }
