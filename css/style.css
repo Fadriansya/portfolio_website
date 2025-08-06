@@ -342,9 +342,36 @@ button {
   color: var(--text);
 }
 
+/* CSS untuk tombol Contact (termasuk AI Form) */
 .btn-contact {
-  border: var(--border);
+  border: 4px solid; /* Border tebal konsisten */
   border-radius: 2rem;
+  padding: 0.5rem 1.5rem; /* Padding seragam */
+  font-weight: 600;
+  width: 100%; /* Lebar penuh agar rata */
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #333;
+}
+
+/* Warna border khusus untuk setiap tombol */
+.btn-contact[style*="red"] {
+  border-color: red;
+}
+.btn-contact[style*="blue"] {
+  border-color: rgb(87, 87, 185);
+}
+.btn-contact[style*="pink"] {
+  border-color: rgb(255, 1, 119);
+}
+.btn-contact[style*="purple"] {
+  border-color: #6a11cb;
+} /* Warna baru untuk AI Form */
+
+/* Efek hover */
+.btn-contact:hover {
+  background-color: #000 !important;
+  color: white !important;
 }
 
 .btn-target button {
