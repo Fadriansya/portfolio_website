@@ -326,16 +326,20 @@ button {
 }
 
 #grid__br__content {
-  bottom: 0;
-  right: 0vw;
+  bottom: 10vh; /* Sesuaikan posisi vertikal */
+  right: 5vw; /* Sesuaikan posisi horizontal */
   transform: translateX(100vw) translateY(100vh);
+  width: 90%; /* Lebar lebih fleksibel */
+  max-width: 300px; /* Batas maksimum lebar */
 }
 
 #grid__br__content div {
-  display: flex;
-  margin: 0.5rem auto;
-  gap: 1.2rem;
-  width: 17rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 0.8rem; /* Jarak antar tombol lebih rapat */
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .contact-text {
@@ -344,14 +348,39 @@ button {
 
 /* CSS untuk tombol Contact (termasuk AI Form) */
 .btn-contact {
-  border: 4px solid; /* Border tebal konsisten */
-  border-radius: 2rem;
-  padding: 0.5rem 1.5rem; /* Padding seragam */
+  border: 3px solid;
+  border-radius: 1.5rem;
+  padding: 0.4rem 0.8rem; /* Padding lebih kecil */
   font-weight: 600;
-  width: 100%; /* Lebar penuh agar rata */
-  transition: all 0.3s ease;
+  font-size: 0.9rem; /* Ukuran font lebih kecil */
+  width: 100%;
+  min-width: 100px; /* Lebar minimum */
+  transition: all 0.2s ease;
   background-color: white;
   color: #333;
+  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar */
+  text-align: center;
+  white-space: nowrap; /* Teks tidak wrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+  #grid__br__content {
+    bottom: 5vh;
+    right: 2vw;
+  }
+
+  #grid__br__content div {
+    grid-template-columns: 1fr; /* 1 kolun di mobile */
+    gap: 0.5rem;
+  }
+
+  .btn-contact {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* Warna border khusus untuk setiap tombol */
