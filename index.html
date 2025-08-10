@@ -232,12 +232,12 @@
         <h5 class="contact-text">Get In Touch</h5>
         <h2 class="contact-text">Contact Mee</h2>
         <div>
-          <a class="btn-target"
-            href="mailto:nasrullahakbar18@gmail.com?subject=Halo%20Nasrullah&body=Halo%20Nasrullah,%0ASaya%20tertarik%20dengan%20portfolio%20Anda.%20Bisa%20kita%20diskusi%20lebih%20lanjut?">
+          <a id="emailButton" class="btn-target">
             <button style="border: 4px solid red; padding: 0px 20px;" class="btn btn-contact">
               Email
             </button>
           </a>
+
           <a class="btn-target" target="_blank"
             href="https://www.linkedin.com/in/nasrullah-akbar-fadriansyah-711642309/"><button
               style="border: 4px solid rgb(87, 87, 185);" class="btn btn-contact">LinkedIn</button>
@@ -256,6 +256,27 @@
     <div id="toggle-button" class="icon" style="background-color: white; border-radius: 50px;">
     </div>
   </div>
+
+  <script>
+    // Email di-encode dalam Base64
+    const encodedEmail = "bmFzcnVsbGFoYWtiYXIxOEBnbWFpbC5jb20="; // nasrullahakbar18@gmail.com
+
+    // Decode Base64
+    function decodeBase64(str) {
+      return decodeURIComponent(atob(str).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+    }
+
+    // Subjek dan body default
+    const subject = encodeURIComponent('Halo Nasrullah');
+    const body = encodeURIComponent('Halo Nasrullah,\nSaya tertarik dengan portfolio Anda. Bisa kita diskusi lebih lanjut?');
+
+    // Set href mailto
+    const emailBtn = document.getElementById('emailButton');
+    emailBtn.href = `mailto:${decodeBase64(encodedEmail)}?subject=${subject}&body=${body}`;
+  </script>
+
 </body>
 
 </html>
