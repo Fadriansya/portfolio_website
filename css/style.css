@@ -365,7 +365,7 @@ button {
   text-overflow: ellipsis;
 }
 
-/* Media Query untuk layar kecil */
+/* Tampilan mobile */
 @media (max-width: 768px) {
   #grid__br__content {
     bottom: 5vh;
@@ -373,13 +373,8 @@ button {
   }
 
   #grid__br__content div {
-    grid-template-columns: 1fr; /* 1 kolun di mobile */
+    grid-template-columns: fr; /* 1 kolun di mobile */
     gap: 0.5rem;
-  }
-
-  .btn-contact {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
   }
 }
 
