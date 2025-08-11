@@ -8,7 +8,9 @@ Dibangun menggunakan **HTML, CSS, dan JavaScript** untuk frontend, serta **Node.
 ## 📌 Demo
 
 - **Frontend (Portfolio Website):** [https://fadriansya.github.io/portfolio_website/](https://fadriansya.github.io/portfolio_website/)
-- **Backend (Proxy AI di Vercel):** `https://ai-backend-neon.vercel.app/` _(ganti sesuai URL Vercel backend Anda)_
+- **Backend (Proxy AI di Vercel):** [https://ai-backend-neon.vercel.app/](https://ai-backend-neon.vercel.app/)  
+   _Kode backend disimpan di repository GitHub terpisah dari frontend, lalu repository backend ini dihubungkan ke Vercel untuk menjalankan serverless function dan menjaga keamanan token AI._
+  [https://github.com/Fadriansya/ai-backend](https://github.com/Fadriansya/ai-backend)
 
 ---
 
