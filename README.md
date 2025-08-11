@@ -7,8 +7,8 @@ Dibangun menggunakan **HTML, CSS, dan JavaScript** untuk frontend, serta **Node.
 
 ## 📌 Demo
 
-- **Frontend (Portfolio Website):** [https://fadriansya.github.io/portfolio_website/](https://fadriansya.github.io/portfolio_website/)  
-- **Backend (Proxy AI di Vercel):** `https://NAMA-BACKEND.vercel.app` *(ganti sesuai URL Vercel backend Anda)*
+- **Frontend (Portfolio Website):** [https://fadriansya.github.io/portfolio_website/](https://fadriansya.github.io/portfolio_website/)
+- **Backend (Proxy AI di Vercel):** `https://ai-backend-neon.vercel.app/` _(ganti sesuai URL Vercel backend Anda)_
 
 ---
 
@@ -25,16 +25,17 @@ Website ini bertujuan sebagai personal branding dan showcase proyek, dengan fitu
 ## ✨ Fitur Interaktif
 
 1. **Navbar Sudut Layar**  
-  Menu *About*, *Experience*, *Projects*, dan *Contact* ditempatkan di keempat sudut layar.
+   Menu _About_, _Experience_, _Projects_, dan _Contact_ ditempatkan di keempat sudut layar.
 2. **Animasi Wajah Dinamis**  
-  Ilustrasi wajah menghadap ke arah menu navigasi yang dipilih.
+   Ilustrasi wajah menghadap ke arah menu navigasi yang dipilih.
 3. **AI Form Tanya Jawab**  
-  Terintegrasi dengan **IBM Granite AI** via API Replicate, melalui backend proxy untuk keamanan.
+   Terintegrasi dengan **IBM Granite AI** via API Replicate, melalui backend proxy untuk keamanan.
 4. **Responsive Design**  
-  Tampilan optimal di desktop maupun perangkat mobile.
-5. **Hosting Terpisah**  
-  - Frontend: GitHub Pages  
-  - Backend: Vercel (serverless function)
+   Tampilan optimal di desktop maupun perangkat mobile.
+5. **Hosting Terpisah**
+
+- Frontend: GitHub Pages
+- Backend: Vercel (serverless function)
 
 ---
 
@@ -52,9 +53,6 @@ portfolio_website/
 │   ├── main.js           # Animasi wajah & interaksi navbar
 │   └── ai-form.js        # Logika AI Form (fetch ke backend)
 ├── index.html            # Halaman utama
-├── about.html            # Halaman About
-├── projects.html         # Halaman Projects
-├── contact.html          # Halaman Contact (tombol AI Form)
 ├── aiform.html           # Halaman AI Form
 └── README.md             # Dokumentasi proyek
 ```
@@ -71,23 +69,27 @@ portfolio_website/
    cd portfolio_website
    ```
 2. **Buka di Browser**
+
    - Klik dua kali `index.html`, atau
    - Gunakan Live Server di VS Code untuk auto-refresh.
 
 3. **Hubungkan ke Backend**
+
    - Edit `js/ai-form.js`:
-    ```javascript
-    const API_URL = "https://NAMA-BACKEND.vercel.app/api/ai";
-    ```
+
+   ```javascript
+   const API_URL = "https://ai-backend-neon.vercel.app/api/ai";
+   ```
 
 4. **Test AI Form**
+
    - Buka `aiform.html` di browser.
    - Ketik pertanyaan dan lihat jawaban AI.
 
 5. **Deploy ke GitHub Pages**
    - Push semua file ke branch `main` di GitHub.
    - Aktifkan GitHub Pages di Settings → Pages → Branch: `main` → `/root`.
-   - Akses website di `https://USERNAME.github.io/portfolio_website/`.
+   - Akses website di `https://github.com/Fadriansya/portfolio_website`.
 
 ---
 
@@ -97,7 +99,7 @@ portfolio_website/
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/fadriansya/portfolio_backend_ai.git
+   git clone https://github.com/Fadriansya/ai-backend
    cd portfolio_backend_ai
    ```
 2. **Install Dependencies**
@@ -106,9 +108,9 @@ portfolio_website/
    ```
 3. **Set Token API**
    - Buat file `.env`:
-    ```ini
-    REPLICATE_API_TOKEN=TOKEN_KAMU
-    ```
+   ```ini
+   REPLICATE_API_TOKEN=TOKEN_KAMU
+   ```
 4. **Jalankan**
    ```bash
    vercel dev
@@ -130,6 +132,7 @@ portfolio_website/
    vercel
    ```
 4. **Atur Environment Variables** di dashboard Vercel:
+
    - `REPLICATE_API_TOKEN = TOKEN_KAMU`
 
 5. Simpan URL Vercel dan update di `ai-form.js` frontend.
@@ -140,7 +143,7 @@ portfolio_website/
 
 ```plaintext
 [Pengguna] --(pertanyaan)--> [Frontend: aiform.html]
-     | 
+     |
      v
 [JS fetch()] --> [Backend Proxy di Vercel] --> [Replicate API] --> [IBM Granite AI]
      |
